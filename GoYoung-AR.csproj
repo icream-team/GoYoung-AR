@@ -220,7 +220,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cat\Scripts\Cat.cs" />
     <Compile Include="Assets\Script\GoYoung.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Cat\Cat_readme.txt" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Models\Cat_Fv_IP_MX_BRM.txt" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Models\Cat_Fv_RM_MX_BRM.txt" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Models\Cat_Sv_IP_MX_BRM.txt" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Models\Cat_Sv_RM_MX_BRM.txt" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Shaders\LayeredFurBase.cginc" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Shaders\LayeredFurShell.cginc" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Shaders\LayeredFur_5Layers.shader" />
+    <None Include="Assets\Domestic Animal - Cat(Full)\Shaders\LayeredFur_7Layers.shader" />
+    <None Include="Assets\Survival_Food_Pack\Readme.txt" />
+    <None Include="Assets\cu_cat2\Shaders\RimWrap.shader" />
+    <None Include="Assets\cu_cat_maker\Shaders\Unity4\CCM.shader" />
+    <None Include="Assets\cu_cat_maker\Shaders\Unity4\CCM_Rim.shader" />
+    <None Include="Assets\cu_cat_maker\Shaders\Unity4\CCM_RimWrap.shader" />
+    <None Include="Assets\cu_cat_maker\Shaders\Unity5\5_CCM.shader" />
+    <None Include="Assets\cu_cat_maker\Shaders\Unity5\5_CCM_Rim.shader" />
+    <None Include="Assets\cu_cat_maker\Shaders\Unity5\5_CCM_RimWrap.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

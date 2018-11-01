@@ -1,0 +1,68 @@
+0000-0001 Bind Pose
+0002-0041 loop Idle                
+0044-0076 loop Walk                
+0079-0122 loop Walk Back
+0125-0179 loop Creeping
+0182-0236 loop Creeping Back
+0239-0271 loop Runing
+0274-0288 loop Runing Fast
+0291-0322 loop Swimming
+0325-0349 Turn Left
+0352-0376 Turn Right 
+0379-0427 Strafe Left
+0430-0478 Strafe Right
+0480-0515 Start Rest
+0517-0587 loop Rest
+0589-0623 End Rest
+0625-0649 Go To Sleep From Rest
+0651-0711 loop Sleeping                       
+0713-0742 End Sleeping To Rest
+0745-0837 loop loop Lying Eating   
+0840-0970 loop Agresive Eating  
+0972-0992 Start Eating
+0994-1079 loop Eating
+1081-1100 End Eating
+1102-1117 Start Roaring   
+1117-1157 loop Roarning           
+1158-1172 End Roarning
+1174-1231 loop Fight Idle        
+1234-1258 loop Attack Right Paw
+1261-1290 Loop Seating Attack Paw 
+1293-1317 loop Attack Jaw
+1319-1343 Start Shitting
+1345-1401 loop Shitting
+1403-1463 End Shitting
+1465-1479 Start Pissing
+1479-1519 loop Pissing
+1520-1534 End Pissing
+1536-1675 loop Lurking         
+1678-1738 loop Drinking 
+1741-1791 loop Trapping
+1794-1892 Idle Seating   
+1895-1915 loop Jumping
+1918-1933 loop Hit Left
+1934-1949 loop Hit Right
+1950-1965 loop Hit Front
+1966-1981 loop Hit Back    
+1984-2014 loop Jump UP
+2017-2050 Loop Jump Down
+2053-2068 Death
+2071-2088 Death 01
+2091-2155 loop Walk Turn Left
+2158-2222 loop Walk Turn Right 
+2225-2253 loop Run Turn Left
+2257-2284 loop Run Turn Right 
+2287-2385 loop Licking  
+2388-2520 loop Licking 01
+2523-2537 loop Run Turn Left 90
+2540-2554 loop Run Turn Right 90
+2557-2596 loop Seating Attack Paw LR   
+2598-2612 Start Idle Arc
+2613-2643 loop Idle Arc
+2644-2658 End Idle Arc
+
+
+
+
+
+
