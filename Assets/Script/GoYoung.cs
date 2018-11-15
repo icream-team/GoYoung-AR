@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.diagnotics;
 
 public class GoYoung : MonoBehaviour
 {
+    public SaveDataList SavedData;
+
     private int love;
     private int hungry;
+    private System.DateTime StartTime;
+    private System.DateTime EndTime;
+    private float RunningTime;
+    private double hungry_variation = 1;
+    private double love_variation = 1;
+
 
     private float MotionTimeInterval = 5.0f;
 
     // getter & setter
-    public void SetLove(int loveVariation)
+    public void SetLove(int loveVariation)    // LOVE범위 설정
     {
         love = love + loveVariation;
 
@@ -20,11 +29,11 @@ public class GoYoung : MonoBehaviour
         if (love > 100)
             love = 100;
     }
-    public int GetLove()
+    public int GetLove()                    
     {
         return love;
     }
-    public void SetHugry(int hungryVariation)
+    public void SetHugry(int hungryVariation)  //hungry 범위 설정
     {
         hungry = hungry + hungryVariation;
 
@@ -37,6 +46,14 @@ public class GoYoung : MonoBehaviour
     public int GetHungry()
     {
         return hungry;
+    }
+    public System.DateTime GetTime()
+    {
+        return System.DateTime.Now;
+    }
+    public ReduceHungry()
+    {
+        
     }
 
     private bool readCatInfo()
@@ -60,6 +77,34 @@ public class GoYoung : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        StartTime = System.DateTime.Now();
+        if(SavedData != null && SavedData.SavedDataList.Count >0) // 저장된 데이터 불러옴
+        {
+            EndTime = SavedData.SavedDataList[0].Time;     
+            hungry = SavedData.SavedDataList[0].Status;
+            love = SavedData.SavedDataList[0].Love;
+        }
+
+        TimeCal();
+        if(hungry - SpanTime/4 < 0)
+        {
+            hungry = 0;
+        } // hungry 조정
+        else
+        {
+            hungry = hungry - SpanTime / 4;
+        }
+
+        if (love - SpanTime / 5 < 0)
+        {
+            love = 0;
+        } // love 조정
+        else
+        {
+            love = love - SpanTime / 5;
+        }
+
+
         if (readCatInfo())
         {
 
@@ -82,5 +127,40 @@ public class GoYoung : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        RunningTime += Time.deltaTime;
+        if (RunningTime >= 600)  //10분마다 하락
+        {
+            hungry -= 5 * hungry_variation;
+            love -= 5;
+            RunningTime = 0;
+        }
+        if(hungry<40)
+        {
+            hungry_variation = 1.5;
+            love_variation = 1.5;
+        }
+        else if (hungry<30)
+        {
+            hungry_variation = 2;
+            love_variation = 2;
+        }
+        else if(hungry <10)
+        {
+            hungry_variation = 3;
+            love_variation = 3;
+        }
 	}
+
+    void OnApplicationQuit()  // 끝날때 호출되는 함수
+    {
+        EndTime = System.DateTime.Now;
+    }
+
+    private void TimeCal()
+    {
+        //이전에 게임이 끝난 시간을 load해와서 둘이 계산.
+        System.DateTime StartTime = System.DateTime.Now; // 년-월-일- 오전/오후 시:분:초 로 저장
+        System.TimeSpan SpanTime = EndTime - StartTime;
+    }
+
 }
