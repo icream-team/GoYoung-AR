@@ -222,6 +222,7 @@
   <ItemGroup>
     <Compile Include="Assets\CatsAssets\Cat\Scripts\Cat.cs" />
     <Compile Include="Assets\Script\GoYoung.cs" />
+    <Compile Include="Assets\Script\UI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\CatsAssets\Cat\Cat_readme.txt" />
