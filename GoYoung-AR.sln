@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{BF3F4097-1523-E9E9-724D-DBD796E2B555}"
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoYoung-AR", "GoYoung-AR.csproj", "{4E348A01-4DD5-9BA4-C230-7E6240902E75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoYoung-AR.Editor", "GoYoung-AR.Editor.csproj", "{08B4DD1A-43B5-7A34-19C2-D36F6527810A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF3F4097-1523-E9E9-724D-DBD796E2B555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF3F4097-1523-E9E9-724D-DBD796E2B555}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF3F4097-1523-E9E9-724D-DBD796E2B555}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF3F4097-1523-E9E9-724D-DBD796E2B555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E348A01-4DD5-9BA4-C230-7E6240902E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E348A01-4DD5-9BA4-C230-7E6240902E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E348A01-4DD5-9BA4-C230-7E6240902E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E348A01-4DD5-9BA4-C230-7E6240902E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B4DD1A-43B5-7A34-19C2-D36F6527810A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B4DD1A-43B5-7A34-19C2-D36F6527810A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B4DD1A-43B5-7A34-19C2-D36F6527810A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B4DD1A-43B5-7A34-19C2-D36F6527810A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA059497-2C9D-4C03-B2C0-FDE123592B21}
 	EndGlobalSection
 EndGlobal

@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.diagnotics;
+//using System.diagnotics;
 
 public class GoYoung : MonoBehaviour
 {
     public SaveDataList SavedData;
 
-    private int love;
-    private int hungry;
-    private System.DateTime StartTime;
+    private double love;
+    private double hungry;
     private System.DateTime EndTime;
     private float RunningTime;
     private double hungry_variation = 1;
@@ -29,7 +28,7 @@ public class GoYoung : MonoBehaviour
         if (love > 100)
             love = 100;
     }
-    public int GetLove()                    
+    public double GetLove()                    
     {
         return love;
     }
@@ -43,7 +42,7 @@ public class GoYoung : MonoBehaviour
         if (hungry > 100)
             hungry = 100;
     }
-    public int GetHungry()
+    public double GetHungry()
     {
         return hungry;
     }
@@ -51,10 +50,7 @@ public class GoYoung : MonoBehaviour
     {
         return System.DateTime.Now;
     }
-    public ReduceHungry()
-    {
-        
-    }
+
 
     private bool readCatInfo()
     {
@@ -77,7 +73,7 @@ public class GoYoung : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        StartTime = System.DateTime.Now();
+        
         if(SavedData != null && SavedData.SavedDataList.Count >0) // 저장된 데이터 불러옴
         {
             EndTime = SavedData.SavedDataList[0].Time;     
@@ -85,7 +81,7 @@ public class GoYoung : MonoBehaviour
             love = SavedData.SavedDataList[0].Love;
         }
 
-        TimeCal();
+        double SpanTime = TimeCal();
         if(hungry - SpanTime/4 < 0)
         {
             hungry = 0;
@@ -131,7 +127,7 @@ public class GoYoung : MonoBehaviour
         if (RunningTime >= 600)  //10분마다 하락
         {
             hungry -= 5 * hungry_variation;
-            love -= 5;
+            love -= 5 * love_variation;
             RunningTime = 0;
         }
         if(hungry<40)
@@ -141,13 +137,13 @@ public class GoYoung : MonoBehaviour
         }
         else if (hungry<30)
         {
-            hungry_variation = 2;
-            love_variation = 2;
+            hungry_variation = 2.0;
+            love_variation = 2.0;
         }
         else if(hungry <10)
         {
-            hungry_variation = 3;
-            love_variation = 3;
+            hungry_variation = 3.0;
+            love_variation = 3.0;
         }
 	}
 
@@ -156,11 +152,12 @@ public class GoYoung : MonoBehaviour
         EndTime = System.DateTime.Now;
     }
 
-    private void TimeCal()
+    private double TimeCal()
     {
         //이전에 게임이 끝난 시간을 load해와서 둘이 계산.
         System.DateTime StartTime = System.DateTime.Now; // 년-월-일- 오전/오후 시:분:초 로 저장
         System.TimeSpan SpanTime = EndTime - StartTime;
+        return SpanTime.TotalMinutes;
     }
 
 }
