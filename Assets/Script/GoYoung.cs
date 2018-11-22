@@ -70,6 +70,11 @@ public class GoYoung : MonoBehaviour
         Debug.Log("resetCatInfo");
     }
 
+    public void OnClickCameeraButton()
+    {
+
+    }
+
     // Use this for initialization
     void Start ()
     {
